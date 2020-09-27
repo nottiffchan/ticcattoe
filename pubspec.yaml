@@ -42,22 +42,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/cat (1).gif
-    - assets/cat (2).gif
-    - assets/cat (3).gif
-    - assets/cat (4).gif
-    - assets/cat (5).gif
-    - assets/cat (6).gif
-    - assets/cat (7).gif
-    - assets/cat (8).gif  
-    - assets/robo (1).gif
-    - assets/robo (2).gif
-    - assets/robo (3).gif
-    - assets/robo (4).gif
-    - assets/robo (5).gif 
-    - assets/nyancat.gif
-    - assets/mariecat.gif
-    - assets/unicorn.gif
+    - assets/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -81,6 +66,9 @@ flutter:
     - family: Skranji
       fonts:
         - asset: fonts/Skranji-Bold.ttf
+    - family: PressStart
+      fonts:
+        - asset: fonts/PressStart2P-Regular.ttf
     # - family: OpenSans
     #   fonts:
     #     - asset: fonts/OpenSans-Regular.ttf

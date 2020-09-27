@@ -8,26 +8,21 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
   @override
   Widget build(BuildContext context) {
-    const blue = const Color(0xFF264653);
-    const lightorange = const Color(0xFFf4a261);
-    const darkorange = const Color(0xFFe76f51);
-    const yellow = const Color(0xFFf9c74f);
-    const green = const Color(0xFF2a9d8f);
     return Scaffold(
-      // backgroundColor: Colors.indigo[800],
-      backgroundColor: blue,
+      backgroundColor: Colors.black45,
       body: Column(
         children: <Widget>[
-          SizedBox(height: 80.0),
+          SizedBox(height: 110.0),
           Center(
-            child: new Text("TicCatToe!", 
+            child: new Text("TicCatToe", 
               style: TextStyle(
-                fontSize: 50.0,
-                fontFamily: 'Skranji', 
+                fontSize: 37.0,
+                fontFamily: 'PressStart', 
                 fontWeight: FontWeight.bold, 
-                color: yellow, 
+                color: Colors.white,
                 letterSpacing: 2.0
               )
             ),
@@ -43,25 +38,20 @@ class _HomePageState extends State<HomePage> {
             onPressed: () {
               goAutoPlay(context);
             },
-            color: green,
-            padding: const EdgeInsets.fromLTRB(50.0, 10.0, 50.0, 10.0),
+            color: Colors.transparent,
+            padding: const EdgeInsets.fromLTRB(45.0, 12.0, 45.0, 12.0),
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-            child: Text('Single Player', style: TextStyle(color: Colors.white, fontFamily: 'Hind', fontSize: 25.0),),
+            child: Text('Single Player', style: TextStyle(color: Colors.white, fontFamily: 'PressStart', fontSize: 15.0),),
           ),
-          SizedBox(height: 28.0),
+          SizedBox(height: 20.0),
           RaisedButton(
             onPressed: (){
               goGamePage(context);
             },
-            color: green,
-            padding: const EdgeInsets.fromLTRB(60.0, 10.0, 60.0, 10.0),
+            color: Colors.transparent,
+            padding: const EdgeInsets.fromLTRB(60.0, 12.0, 60.0, 12.0),
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-            child: Text('Multiplayer', style: TextStyle(color: Colors.white, fontFamily: 'Hind', fontSize: 25.0),),
-            // child: Icon(
-            //   Icons.play_arrow,
-            //   color: Colors.white,
-            //   size: 80.0,
-            // ),
+            child: Text('Multiplayer', style: TextStyle(color: Colors.white, fontFamily: 'PressStart', fontSize: 15.0),),
           ),
         ],
       ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tictactoe/Player1Page.dart';
-// import 'package:tictactoe/Player2Page.dart';
 import 'package:tictactoe/CustomDialogue.dart';
 import 'package:tictactoe/gameButton.dart';
 import 'dart:math';
@@ -31,18 +30,19 @@ class _AutoPlayState extends State<AutoPlay> {
     player1 = new List();
     player2 = new List();
     activePlayer = 1;
-    const haha = const Color(0xFF3E5E6B);
+    Color gray = Colors.grey[900];
+    // const Colors.grey = const Color(0xFF3E5E6B);
 
     var gameButtons = <GameButton>[
-      new GameButton(id: 1, bg: haha),
-      new GameButton(id: 2, bg: haha),
-      new GameButton(id: 3, bg: haha),
-      new GameButton(id: 4, bg: haha),
-      new GameButton(id: 5, bg: haha),
-      new GameButton(id: 6, bg: haha),
-      new GameButton(id: 7, bg: haha),
-      new GameButton(id: 8, bg: haha),
-      new GameButton(id: 9, bg: haha),
+      new GameButton(id: 1, bg: gray),
+      new GameButton(id: 2, bg: gray),
+      new GameButton(id: 3, bg: gray),
+      new GameButton(id: 4, bg: gray),
+      new GameButton(id: 5, bg: gray),
+      new GameButton(id: 6, bg: gray),
+      new GameButton(id: 7, bg: gray),
+      new GameButton(id: 8, bg: gray),
+      new GameButton(id: 9, bg: gray),
     ];
     return gameButtons;
   }
@@ -58,7 +58,7 @@ class _AutoPlayState extends State<AutoPlay> {
         }
         if (numPic == 1) {
           gb.enabled = true;
-          gb.img = Image.asset('assets/cat (1).gif');
+          gb.img = Image.asset('assets/cat1.gif');
           activePlayer = 2;
           player1.add(gb.id);
         }
@@ -70,37 +70,37 @@ class _AutoPlayState extends State<AutoPlay> {
         }
         if (numPic == 3) {
           gb.enabled = true;
-          gb.img = Image.asset('assets/cat (3).gif');
+          gb.img = Image.asset('assets/cat3.gif');
           activePlayer = 2;
           player1.add(gb.id);
         }
         if (numPic == 4) {
           gb.enabled = true;
-          gb.img = Image.asset('assets/cat (4).gif');
+          gb.img = Image.asset('assets/cat4.gif');
           activePlayer = 2;
           player1.add(gb.id);
         }
         if (numPic == 5) {
           gb.enabled = true;
-          gb.img = Image.asset('assets/cat (5).gif');
+          gb.img = Image.asset('assets/cat5.gif');
           activePlayer = 2;
           player1.add(gb.id);
         }
         if (numPic == 6) {
           gb.enabled = true;
-          gb.img = Image.asset('assets/cat (6).gif');
+          gb.img = Image.asset('assets/cat6.gif');
           activePlayer = 2;
           player1.add(gb.id);
         }
         if (numPic == 7) {
           gb.enabled = true;
-          gb.img = Image.asset('assets/cat (7).gif');
+          gb.img = Image.asset('assets/cat7.gif');
           activePlayer = 2;
           player1.add(gb.id);
         }
         if (numPic == 8) {
           gb.enabled = true;
-          gb.img = Image.asset('assets/cat (8).gif');
+          gb.img = Image.asset('assets/cat8.gif');
           activePlayer = 2;
           player1.add(gb.id);
         }
@@ -112,7 +112,7 @@ class _AutoPlayState extends State<AutoPlay> {
         }
         
       } else {
-          gb.img = Image.asset('assets/robo (5).gif');
+          gb.img = Image.asset('assets/robo5.gif');
           activePlayer = 1;
           player2.add(gb.id);
       }
@@ -224,30 +224,25 @@ class _AutoPlayState extends State<AutoPlay> {
   }
   @override
   Widget build(BuildContext context) {
-    const blue = const Color(0xFF264653);
-    const lightorange = const Color(0xFFf4a261);
-    const darkorange = const Color(0xFFe76f51);
-    const yellow = const Color(0xFFf9c74f);
-    const green = const Color(0xFF2a9d8f);
     return Scaffold(
-      backgroundColor: blue,
+      backgroundColor: Colors.black45,
       body: new Column(
         mainAxisAlignment: MainAxisAlignment.start,
-        // crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          SizedBox(height: 50.0),
-          new Text("TicCatToe!", 
+          SizedBox(height: 60.0),
+          new Text("TicCatToe", 
             style: TextStyle(
-              fontSize: 50.0,
-              fontFamily: 'Skranji', 
+              fontSize: 37.0,
+              fontFamily: 'PressStart', 
               fontWeight: FontWeight.bold, 
-              color: yellow, 
+              color: Colors.white, 
               letterSpacing: 2.0
             )
           ),
-          // SizedBox(height: 10.0),
-          Text('Player 1                  Player 2', style: TextStyle(color: Colors.white, fontSize: 17.0, fontFamily: 'Hind')),
-          Text(p1score.toString() + '                             ' + p2score.toString(), style: TextStyle(color: Colors.white, fontSize: 17.0, fontFamily: 'Hind')),
+          SizedBox(height: 30.0),
+          Text('Player 1           Player 2', style: TextStyle(color: Colors.white, fontSize: 11.0, fontFamily: 'PressStart')),
+          SizedBox(height: 8.0),
+          Text(p1score.toString() + '                      ' + p2score.toString(), style: TextStyle(color: Colors.white, fontSize: 10.0, fontFamily: 'PressStart')),
           new Expanded(
              child: new GridView.builder(
             padding: const EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 0.0),
@@ -279,33 +274,33 @@ class _AutoPlayState extends State<AutoPlay> {
               Column(
                 children: <Widget>[
                   new RaisedButton(
-                    color: green,
+                    color: Colors.transparent,
                     // elevation: 0.0,
-                    child: new Text("Player 1 avatar", style: TextStyle(fontSize: 20.0, color: Colors.grey[50], fontFamily: 'Hind')),
+                    child: new Text("Player 1 avatar", style: TextStyle(fontSize: 10.0, color: Colors.grey[50], fontFamily: 'PressStart')),
                     onPressed: () {
                       goPlayer1Page(context);
                     },
                   ),
-                  SizedBox(height: 20.0)
+                  // SizedBox(height: 20.0)
                 ],
               ),
-              SizedBox(width: 130.0),
+              SizedBox(width: 100.0),
               new RaisedButton(
                 elevation: 0.0,
                 child: new Text("Reset",
                 style: new TextStyle(
                   color: Colors.white,
-                  fontSize: 20.0,
-                  fontFamily: 'Hind'
+                  fontSize: 10.0,
+                  fontFamily: 'PressStart'
                 )
                 ),
-                color: darkorange,
+                color: Colors.transparent,
                 padding: const EdgeInsets.all(10.0),
                 onPressed: resetGame,
               )
             ],
           ),
-          new SizedBox(height: 20.0),
+          new SizedBox(height: 40.0),
           ],
       )
     );

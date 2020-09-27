@@ -9,13 +9,12 @@ class _Player1PageState extends State<Player1Page> {
 
   @override
   Widget build(BuildContext context) {
-    const blue = const Color(0xFF264653);
     return new Scaffold(
-      backgroundColor: blue,
+      backgroundColor: Colors.black,
       appBar: new AppBar(
         elevation: 0.0,
-        backgroundColor: blue,
-        title: new Text("Player 1 Character Select", style: TextStyle(fontFamily: 'Hind', fontSize: 24.0, color: Colors.white)),
+        backgroundColor: Colors.black,
+        title: new Text("Player 1 Character Select", style: TextStyle(fontFamily: 'PressStart', fontSize: 12.0, color: Colors.white)),
       ),
       body: GridView.count(
         crossAxisCount: 3,
@@ -23,7 +22,7 @@ class _Player1PageState extends State<Player1Page> {
           FlatButton(onPressed: () {
             Navigator.pop(context, 1);
           }, 
-          child: Image.asset('assets/cat (1).gif')),
+          child: Image.asset('assets/cat1.gif')),
           FlatButton(onPressed: () {
             Navigator.pop(context, 2);
           }, 
@@ -31,27 +30,27 @@ class _Player1PageState extends State<Player1Page> {
           FlatButton(onPressed: () {
             Navigator.pop(context, 3);
           }, 
-          child: Image.asset('assets/cat (3).gif')),
+          child: Image.asset('assets/cat3.gif')),
           FlatButton(onPressed: () {
             Navigator.pop(context, 4);
           }, 
-          child: Image.asset('assets/cat (4).gif')),
+          child: Image.asset('assets/cat4.gif')),
           FlatButton(onPressed: () {
             Navigator.pop(context, 5);
           }, 
-          child: Image.asset('assets/cat (5).gif')),
+          child: Image.asset('assets/cat5.gif')),
           FlatButton(onPressed: () {
             Navigator.pop(context, 6);
           }, 
-          child: Image.asset('assets/cat (6).gif')),
+          child: Image.asset('assets/cat6.gif')),
           FlatButton(onPressed: () {
             Navigator.pop(context, 7);
           }, 
-          child: Image.asset('assets/cat (7).gif')),
+          child: Image.asset('assets/cat7.gif')),
           FlatButton(onPressed: () {
             Navigator.pop(context, 8);
           }, 
-          child: Image.asset('assets/cat (8).gif')),
+          child: Image.asset('assets/cat8.gif')),
           FlatButton(onPressed: () {
             Navigator.pop(context, 9);
           }, 
